@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { HOME_DETAILS } from '@/utility/constants';
 import BodyContainer from '@/components/ui/containers/BodyContainer';
-import TypeWriter from '@/components/ui/animations/TypeWriter';
+import TypeWriter from '@/components/ui/animations/TypeWriter/TypeWriter';
 
 const Home:FC<{}> = () => {
   return (

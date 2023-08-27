@@ -1,5 +1,5 @@
 import type { Config } from 'tailwindcss'
-import from from './.next/server/app/page';
+import plugin from 'tailwindcss/plugin';
 
 const config: Config = {
   content: [
@@ -34,17 +34,22 @@ const config: Config = {
           to: { left: '100%' }
         },
         blink: {
-          to: { backgroud: 'transparent' }
+          to: { background: 'transparent' } // should be the backg
         },
-        fadeInUp: {
-          to: {
-            opacity: '1',
-            transform: 'translateY(0)'
-          }
-        }
       }
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function({ matchComponents }) {
+      matchComponents({
+        'typewriter-after': (steps: string) => ({
+          animation: `typewriter 7s steps(${steps}) 1s forwards, blink 750ms steps(${steps}) infinite`
+        }),
+        'typewriter-before': (steps: string) => ({
+          animation: `typewriter 7s steps(${steps}) 1s forwards`
+        })
+      })
+    })
+  ],
 }
 export default config
