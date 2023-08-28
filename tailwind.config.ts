@@ -43,7 +43,7 @@ const config: Config = {
     plugin(function({ matchComponents }) {
       matchComponents({
         'typewriter-after': (steps: string) => ({
-          animation: `typewriter 7s steps(${steps}) 1s forwards, blink 750ms steps(${steps})`
+          animation: `typewriter 7s steps(${steps}) 1s forwards, blink 750ms steps(${steps}) infinite`
         }),
         'typewriter-before': (steps: string) => ({
           animation: `typewriter 7s steps(${steps}) 1s forwards`

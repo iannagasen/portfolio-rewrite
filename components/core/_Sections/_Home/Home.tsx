@@ -27,8 +27,6 @@ const Home:FC<{}> = () => {
   //   return () => clearTimeout(timer);
   // }, [currentDescription])
   
-  console.log(HOME_DETAILS.description[currentDescription])
-  console.log(currentDescription);
 
   return (
     <BodyContainer>
