@@ -1,3 +1,5 @@
+"use client"
+
 import React, { FC, ReactNode } from 'react'
 import { cn } from '../../../lib/utils';
 
@@ -6,9 +8,9 @@ interface Props {
   children: ReactNode | ReactNode[]
 }
 
-const BodyContainer:FC<Props> = ({ className, children }) => {
+const BodyContainer:FC<Props> = ({ className: cls, children }) => {
   return (
-    <div className={cn('h-[90vh]', className)}>
+    <div className={cn(cls, 'h-[90vh]' )}>
       {children}
     </div>
   )

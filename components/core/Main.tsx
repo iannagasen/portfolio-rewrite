@@ -1,3 +1,5 @@
+'use client'
+
 import React, { FC } from 'react'
 import NavBarHeader from '@/components/core/_Header/NavBarHeader';
 import Home from './_Sections/_Home/Home';

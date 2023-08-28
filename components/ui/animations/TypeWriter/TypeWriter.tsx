@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, Ref, forwardRef } from 'react'
 import { cn } from '@/lib/utils';
 
 interface Props {
@@ -10,9 +10,10 @@ interface Props {
 // "after:animate-typewriter-after"
 // apparently tailwind loads these class which initializes the 'typewriter' keyframes 
 // which is used by typewriter-before-[] typewriter-after-[] plugin
-const TypeWriter:FC<Props> = ({ text }) => {
+const TypeWriter = forwardRef<HTMLDivElement, Props>(({ text }, ref) => {
+
   return (
-    <div className={cn(
+    <div ref={ref} className={cn(
       "relative font-mono inline-block",
       "before:absolute before:bg-background before:top-0 before:bottom-0 before:left-0 before:right-0 before:content-[' ']",
       // "before:animate-typewriter-before",
@@ -24,6 +25,8 @@ const TypeWriter:FC<Props> = ({ text }) => {
       {text}
     </div>
   )
-}
+})
+
+TypeWriter.displayName = 'TypeWriter';
 
 export default TypeWriter

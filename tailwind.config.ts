@@ -34,7 +34,7 @@ const config: Config = {
           to: { left: '100%' }
         },
         blink: {
-          to: { background: 'transparent' } // should be the backg
+          to: { background: 'transparent' }
         },
       }
     },
@@ -43,7 +43,7 @@ const config: Config = {
     plugin(function({ matchComponents }) {
       matchComponents({
         'typewriter-after': (steps: string) => ({
-          animation: `typewriter 7s steps(${steps}) 1s forwards, blink 750ms steps(${steps}) infinite`
+          animation: `typewriter 7s steps(${steps}) 1s forwards, blink 750ms steps(${steps})`
         }),
         'typewriter-before': (steps: string) => ({
           animation: `typewriter 7s steps(${steps}) 1s forwards`

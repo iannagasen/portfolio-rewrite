@@ -1,6 +1,9 @@
-export const HOME_DETAILS = {
-  salutation: "Hi, I'm",
-  name: 'Ian Neil Agasen',
-  description: 'A fullstack software developer'
-
+// get the next index from array
+export const incrementer = (arr: any[], currentIndex: number) => {
+  const length = arr.length;
+  if (currentIndex === length - 1) {
+    return 0;
+  } else {
+    return currentIndex + 1;
+  }
 }

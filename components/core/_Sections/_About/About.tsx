@@ -1,3 +1,5 @@
+'use client'
+
 import BodyContainer from '@/components/ui/containers/BodyContainer'
 import { cn } from '@/lib/utils'
 import React, { FC } from 'react'
@@ -45,9 +47,9 @@ const About:FC = () => {
         {/* SKILL TAGS */}
         <div className=''>
           {Object.values(SKILLS).map((skillsLine, i) => (
-            <div key={i} className='flex flex-row gap-1 mt-[0.4rem]'>
+            <div key={skillsLine[0]} className='flex flex-row gap-1 mt-[0.4rem]'>
               {skillsLine.map((skill, i) => (
-                <div key={i} className={cn(
+                <div key={skill} className={cn(
                   'border-[0.1em] rounded-xl p-1',
                   randomColorStyleClass()
                 )}>
